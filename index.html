@@ -2,596 +2,218 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PalmInsight | Smart Palm Waste Management</title>
-
-    <!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PalmInsight - Smart Palm Oil Management</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
 </head>
 <body>
 
-    <!-- ==================== -->
-    <!-- NAVBAR -->
-    <!-- ==================== -->
-    <header id="navbar">
-
-        <div class="container nav-container">
-
+    <!-- ==================== NAVIGASI (DIPERBAIKI) ==================== -->
+    <nav>
+        <div class="navdiv">
             <div class="logo">
-                <i class="fa-solid fa-seedling"></i>
-                <span>PalmInsight</span>
+                <a href="#">PalmInsight</a>
             </div>
-
-            <nav id="nav-menu">
-
-                <a href="#home">Beranda</a>
-                <a href="#about">Tentang</a>
-                <a href="#products">Produk</a>
-                <a href="#process">Proses</a>
-                <a href="#impact">Dampak</a>
-                <a href="#contact">Kontak</a>
-
-            </nav>
-
-            <a href="#contact" class="btn-nav">
-                Hubungi Kami
-            </a>
-
-            <div id="hamburger">
-                <i class="fa-solid fa-bars"></i>
+            
+            <!-- Menu untuk desktop & mobile -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">winners</a></li>
+                <li><a href="#">Competition</a></li>
+                <li><a href="#">Announcement</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <button class="signin-btn"><a href="#">Sign In</a></button>
+                <div class="menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-
         </div>
+    </nav>
 
+    <!-- ==================== HERO SECTION ==================== -->
+    <header>
+        <section class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="event-year-badge">2026</div>
+                    <h1>
+                        Unleash Your Innovation in
+                        <span>Technology and Entertainment</span>
+                    </h1>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Register Now</button>
+                        <button class="btn-secondary">Learn More</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>2026</h3>
+                            <p>EVENT YEAR</p>
+                        </div>
+                        <div class="stat">
+                            <h3>UTM</h3>
+                            <p>MADURA</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4+</h3>
+                            <p>CATEGORIES</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hud-ring ring-1"></div>
+                    <div class="hud-ring ring-2"></div>
+                    <div class="hud-ring ring-3"></div>
+                    <img src="assets/biji.png" alt="Palm Fruit" id="palmFruit">
+                </div>
+            </div>
+        </section>
     </header>
 
-
-    <!-- ==================== -->
-    <!-- HERO -->
-    <!-- ==================== -->
-
-    <section id="home" class="hero">
-
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-
-            <span class="badge">
-                Sustainable Palm Industry
-            </span>
-
-            <h1>
-                Mengubah Limbah Sawit
-                Menjadi Nilai Berkelanjutan
-            </h1>
-
-            <p>
-                PalmInsight membantu industri kelapa sawit
-                mengelola limbah secara lebih efektif melalui
-                pendekatan digital, pemantauan data,
-                dan solusi ekonomi sirkular yang ramah lingkungan.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#about" class="btn-primary">
-                    Pelajari Lebih Lanjut
-                </a>
-
-                <a href="#products" class="btn-secondary">
-                    Lihat Produk
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================== -->
-    <!-- STATISTICS -->
-    <!-- ==================== -->
-
-    <section class="stats">
-
-        <div class="container stats-container">
-
-            <div class="stat-card">
-                <h2>25+</h2>
-                <p>Mitra Industri</p>
-            </div>
-
-            <div class="stat-card">
-                <h2>10K+</h2>
-                <p>Ton Limbah Terolah</p>
-            </div>
-
-            <div class="stat-card">
-                <h2>95%</h2>
-                <p>Efisiensi Monitoring</p>
-            </div>
-
-            <div class="stat-card">
-                <h2>100%</h2>
-                <p>Berbasis Keberlanjutan</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================== -->
-    <!-- ABOUT -->
-    <!-- ==================== -->
-
-    <section id="about" class="about">
-
-        <div class="container about-container">
-
-            <div class="about-image">
-                <img src="assets/sawit.jpg" alt="Perkebunan Sawit">
-            </div>
-
-            <div class="about-content">
-
-                <span class="section-tag">
-                    Tentang Kami
-                </span>
-
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about">
+        <div class="about-top">
+            <div class="about-left">
+                <span class="about-tag">ABOUT OUR PLATFORM</span>
                 <h2>
-                    Solusi Digital untuk Pengelolaan Limbah Sawit
+                    TRANSFORMING PALM WASTE 
+                    <br>
+                    INTO SUSTAINABLE VALUE
                 </h2>
-
+            </div>
+            <div class="about-right">
                 <p>
-                    PalmInsight membantu perusahaan perkebunan dan
-                    pengolahan sawit dalam memantau, mengelola,
-                    dan mengoptimalkan limbah hasil produksi.
+                    <b>Kelapa sawit</b> merupakan tanaman perkebunan tropis yang berasal dari wilayah Afrika Barat dan kini menjadi salah satu komoditas pertanian paling penting di dunia. 
+                    Tanaman ini dibudidayakan secara luas di daerah beriklim tropis karena memiliki produktivitas minyak yang sangat tinggi dibandingkan tanaman penghasil minyak nabati lainnya. 
+                    Indonesia merupakan salah satu produsen kelapa sawit terbesar di dunia dan menjadikan komoditas ini sebagai sektor strategis dalam perekonomian nasional.
                 </p>
-
-                <ul class="about-list">
-
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        Monitoring limbah real-time
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        Analisis data berbasis dashboard
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        Pemanfaatan limbah menjadi produk bernilai
-                    </li>
-
-                </ul>
-
-                <a href="#" class="btn-primary">
-                    Selengkapnya
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================== -->
-    <!-- PRODUCTS -->
-    <!-- ==================== -->
-
-    <section id="products" class="products">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>Produk Turunan Sawit</span>
-
-                <h2>
-                    Pemanfaatan Limbah Menjadi Produk Bernilai
-                </h2>
-
-            </div>
-
-            <div class="product-grid">
-
-                <article class="product-card">
-
-                    <img src="assets/kompos.jpeg">
-
-                    <div class="card-content">
-
-                        <h3>Kompos Organik</h3>
-
-                        <p>
-                            Pupuk organik dari tandan kosong sawit.
-                        </p>
-
-                    </div>
-
-                </article>
-
-                <article class="product-card">
-
-                    <img src="assets/biomasa.webp">
-
-                    <div class="card-content">
-
-                        <h3>Biomassa</h3>
-
-                        <p>
-                            Energi alternatif ramah lingkungan.
-                        </p>
-
-                    </div>
-
-                </article>
-
-                <article class="product-card">
-
-                    <img src="assets/biocair.jpg">
-
-                    <div class="card-content">
-
-                        <h3>Pupuk Cair</h3>
-
-                        <p>
-                            Nutrisi tanaman hasil fermentasi limbah.
-                        </p>
-
-                    </div>
-
-                </article>
-
-                <article class="product-card">
-
-                    <img src="assets/pakan ternak.jpg">
-
-                    <div class="card-content">
-
-                        <h3>Pakan Ternak</h3>
-
-                        <p>
-                            Alternatif pakan bernilai ekonomis.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ==================== -->
-    <!-- PROCESS -->
-    <!-- ==================== -->
-
-    <section id="process" class="process">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>Alur Pengolahan</span>
-
-                <h2>
-                    Transformasi Limbah Menjadi Produk Bernilai
-                </h2>
-
-            </div>
-
-            <div class="process-grid">
-
-                <div class="process-card">
-
-                    <i class="fa-solid fa-truck"></i>
-
-                    <span>01</span>
-
-                    <h3>Pengumpulan</h3>
-
-                    <p>
-                        Limbah sawit dikumpulkan dari area
-                        perkebunan dan pabrik pengolahan.
-                    </p>
-
-                </div>
-
-                <div class="process-card">
-
-                    <i class="fa-solid fa-chart-line"></i>
-
-                    <span>02</span>
-
-                    <h3>Monitoring</h3>
-
-                    <p>
-                        Data limbah dicatat dan dianalisis
-                        secara digital dan real-time.
-                    </p>
-
-                </div>
-
-                <div class="process-card">
-
-                    <i class="fa-solid fa-gears"></i>
-
-                    <span>03</span>
-
-                    <h3>Pengolahan</h3>
-
-                    <p>
-                        Limbah dikonversi menjadi biomassa,
-                        kompos, biochar, dan produk lain.
-                    </p>
-
-                </div>
-
-                <div class="process-card">
-
-                    <i class="fa-solid fa-leaf"></i>
-
-                    <span>04</span>
-
-                    <h3>Distribusi</h3>
-
-                    <p>
-                        Produk hasil olahan dimanfaatkan
-                        kembali untuk sektor industri.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================== -->
-    <!-- IMPACT -->
-    <!-- ==================== -->
-
-    <section id="impact" class="impact">
-
-        <div class="container impact-container">
-
-            <div class="impact-content">
-
-                <span class="section-tag">
-                    Dampak Berkelanjutan
-                </span>
-
-                <h2>
-                    Memberikan Nilai Tambah Bagi Lingkungan dan Industri
-                </h2>
-
                 <p>
-                    PalmInsight membantu perusahaan mengurangi limbah,
-                    meningkatkan efisiensi operasional, serta
-                    menciptakan peluang ekonomi baru dari hasil
-                    pengolahan limbah sawit.
+                    Kelapa sawit tidak hanya berperan sebagai sumber minyak nabati, tetapi juga sebagai sumber biomassa yang mendukung konsep ekonomi sirkular. 
+                    Berbagai limbah hasil pengolahan dapat dimanfaatkan kembali menjadi energi terbarukan, pupuk organik, material ramah lingkungan, dan produk inovatif lainnya. 
+                    Dengan pengelolaan yang tepat dan berkelanjutan, kelapa sawit dapat menjadi salah satu solusi dalam mendukung ketahanan pangan, energi, dan pembangunan ekonomi hijau.
                 </p>
-
-                <div class="impact-stats">
-
-                    <div>
-                        <h3>70%</h3>
-                        <span>Pengurangan Limbah</span>
-                    </div>
-
-                    <div>
-                        <h3>25+</h3>
-                        <span>Mitra Industri</span>
-                    </div>
-
-                    <div>
-                        <h3>10K+</h3>
-                        <span>Ton Terolah</span>
-                    </div>
-
-                </div>
-
             </div>
-
-            <div class="impact-image">
-
-                <img src="assets/sawit.png">
-
-            </div>
-
         </div>
-
+        <div class="about-image">
+            <img src="assets/sawit.jpg" alt="Palm Plantation">
+        </div>
     </section>
 
-
-    <!-- ==================== -->
-    <!-- CTA -->
-    <!-- ==================== -->
-
-    <section class="cta">
-
-        <div class="container cta-box">
-
-            <span>
-                Masa Depan Industri Sawit
-            </span>
-
+    <!-- ==================== FEATURES SECTION ==================== -->
+    <section class="features">
+        <div class="features-header">
+            <span class="features-tag">OUR FEATURES</span>
             <h2>
-                Ubah Limbah Menjadi Peluang Bisnis Berkelanjutan
+                Smart Solutions For
+                <span>Palm Plantation Management</span>
             </h2>
-
             <p>
-                Bergabung bersama PalmInsight untuk
-                mengoptimalkan pengelolaan limbah
-                dengan teknologi digital.
+                Jelajahi berbagai fitur PalmInsight untuk membantu
+                pengelolaan perkebunan kelapa sawit secara efisien,
+                modern, dan berkelanjutan.
             </p>
-
-            <a href="#contact" class="btn-primary">
-                Mulai Konsultasi
+        </div>
+        <div class="feature-grid">
+            <a href="#" class="feature-card">
+                <div class="feature-image">
+                    <img src="assets/sawit.jpg" alt="Plantation Monitoring">
+                </div>
+                <div class="feature-title">Plantation Monitoring</div>
             </a>
-
+            <a href="#" class="feature-card">
+                <div class="feature-image">
+                    <img src="assets/sawit.jpg" alt="Yield Analytics">
+                </div>
+                <div class="feature-title">Yield Analytics</div>
+            </a>
+            <a href="#" class="feature-card">
+                <div class="feature-image">
+                    <img src="assets/sawit.jpg" alt="Smart Irrigation">
+                </div>
+                <div class="feature-title">Smart Irrigation</div>
+            </a>
         </div>
-
     </section>
 
-
-    <!-- ==================== -->
-    <!-- CONTACT -->
-    <!-- ==================== -->
-
-    <section id="contact" class="contact">
-
-        <div class="container contact-container">
-
-            <div class="contact-info">
-
-                <span class="section-tag">
-                    Hubungi Kami
-                </span>
-
-                <h2>
-                    Diskusikan Solusi untuk Industri Anda
-                </h2>
-
-                <p>
-                    Tim PalmInsight siap membantu
-                    perusahaan dalam mengelola
-                    limbah sawit secara lebih efektif.
-                </p>
-
-                <div class="contact-item">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    <span>
-                        info@palminsight.id
-                    </span>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    <span>
-                        +62 812 3456 7890
-                    </span>
-
-                </div>
-
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta">
+        <div class="cta-line"></div>
+        <div class="cta-glow"></div>
+        <div class="cta-content">
+            <span class="cta-tag">FUTURE OF PALM INDUSTRY</span>
+            <h2>
+                Pemanfaatan Limbah Sawit
+                <span>Menjadi Produk Bernilai Tinggi</span>
+            </h2>
+            <p>
+                Dukung transformasi industri kelapa sawit yang
+                berkelanjutan melalui inovasi pengolahan limbah,
+                energi terbarukan, dan teknologi modern.
+            </p>
+            <div class="cta-buttons">
+                <button class="btn-primary">Explore More</button>
             </div>
-
-            <form class="contact-form">
-
-                <input
-                    type="text"
-                    placeholder="Nama Lengkap">
-
-                <input
-                    type="email"
-                    placeholder="Email">
-
-                <textarea
-                    rows="5"
-                    placeholder="Pesan Anda"></textarea>
-
-                <button type="submit">
-
-                    Kirim Pesan
-
-                </button>
-
-            </form>
-
         </div>
-
     </section>
 
-
-    <!-- ==================== -->
-    <!-- FOOTER -->
-    <!-- ==================== -->
-
-    <footer>
-
-        <div class="container footer-grid">
-
-            <div>
-
-                <h3>PalmInsight</h3>
-
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>PalmInsight</h2>
                 <p>
-                    Platform digital pengelolaan
-                    limbah sawit menuju industri
-                    yang lebih hijau dan berkelanjutan.
+                    Platform digital untuk membantu pengelolaan
+                    perkebunan kelapa sawit secara modern,
+                    efisien, dan berkelanjutan.
                 </p>
-
             </div>
-
-            <div>
-
-                <h4>Navigasi</h4>
-
-                <a href="#home">Beranda</a>
-                <a href="#about">Tentang</a>
-                <a href="#products">Produk</a>
-                <a href="#contact">Kontak</a>
-
+            <div class="footer-stats">
+                <div>
+                    <h2>500+</h2>
+                    <p>Plantations</p>
+                </div>
+                <div>
+                    <h2>98%</h2>
+                    <p>Efficiency</p>
+                </div>
+                <div>
+                    <h2>24/7</h2>
+                    <p>Monitoring</p>
+                </div>
             </div>
-
-            <div>
-
-                <h4>Produk</h4>
-
-                <a href="#">Kompos</a>
-                <a href="#">Biomassa</a>
-                <a href="#">Biochar</a>
-                <a href="#">Pakan Ternak</a>
-
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Features</a>
+                <a href="#">Contact</a>
             </div>
-
-            <div>
-
-                <h4>Sosial Media</h4>
-
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Facebook</a>
-
+            <div class="footer-links">
+                <h3>Features</h3>
+                <a href="#">Monitoring</a>
+                <a href="#">Analytics</a>
+                <a href="#">Yield Tracking</a>
+                <a href="#">Drone Surveillance</a>
             </div>
-
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email : info@palminsight.com</p>
+                <p>Phone : +62 812 3456 7890</p>
+                <p>Indonesia</p>
+            </div>
         </div>
-
-        <div class="copyright">
-
-            © 2026 PalmInsight. All Rights Reserved.
-
+        <div class="footer-bottom">
+            <p>© 2026 PalmInsight. All Rights Reserved.</p>
         </div>
-
     </footer>
 
-
-    <!-- JS -->
     <script src="js/script.js"></script>
-
 </body>
 </html>
