@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PalmInsight - Eco Palm & K3 | Keselamatan & Lingkungan</title>
+    <link rel="stylesheet" href="css/eco-k3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==================== NAVIGASI ==================== -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">PalmInsight</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="#" class="active">Eco & K3</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="signin-btn"><a href="#">Dashboard</a></button>
+                <div class="menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-eco">
+        <div class="hero-bg-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-text animate-up">
+                <span class="hero-tag">
+                    <i class="fas fa-leaf"></i> ECO PALM & K3
+                </span>
+                <h1>Keselamatan Kerja & <span class="highlight">Lingkungan Berkelanjutan</span></h1>
+                <p>Mewujudkan industri kelapa sawit yang aman bagi pekerja, ramah lingkungan, dan berkelanjutan untuk masa depan.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="scrollToContent">
+                        <i class="fas fa-arrow-down"></i> Explore Fitur
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-file-alt"></i> Panduan K3
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats-card animate-up delay-1">
+                <div class="stats-ring">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" stroke="rgba(0,255,153,0.1)" stroke-width="3" fill="none"/>
+                        <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="3" fill="none" stroke-dasharray="283" stroke-dashoffset="56" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+                    </svg>
+                    <span class="stats-percent">80<small>%</small></span>
+                </div>
+                <p>Target Zero Accident<br>2026</p>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== 5 FITUR UTAMA (GRID MODERN) ==================== -->
+    <section class="features-grid-section">
+        <div class="section-header">
+            <span class="section-tag">CORE FEATURES</span>
+            <h2>Eco Palm & <span class="highlight">Keselamatan Kerja</span></h2>
+            <p>Lima pilar utama menuju industri sawit yang berkelanjutan dan zero accident</p>
+        </div>
+
+        <div class="features-grid">
+            <!-- Card 1: Pengolahan Limbah Sawit -->
+            <div class="feature-card-large animate-on-scroll" data-feature="1">
+                <div class="card-glow"></div>
+                <div class="card-icon">
+                    <i class="fas fa-recycle"></i>
+                    <div class="icon-ring"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-number">01</span>
+                    <h3>Pengolahan Limbah Sawit</h3>
+                    <p>Transformasi POME (Palm Oil Mill Effluent) menjadi biogas, pupuk organik, dan air layak lingkungan.</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">85<small>%</small></span>
+                            <span class="stat-label">Reduksi BOD</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">3.2<small>MW</small></span>
+                            <span class="stat-label">Energi Terbarukan</span>
+                        </div>
+                    </div>
+                    <button class="card-learn-more" data-modal="modal1">
+                        Pelajari <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="card-bg-pattern"></div>
+            </div>
+
+            <!-- Card 2: Energi Biomassa -->
+            <div class="feature-card-large animate-on-scroll delay-1" data-feature="2">
+                <div class="card-glow"></div>
+                <div class="card-icon">
+                    <i class="fas fa-bolt"></i>
+                    <div class="icon-ring"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-number">02</span>
+                    <h3>Energi Biomassa</h3>
+                    <p>Pemanfaatan cangkang, serat, dan tandan kosong sebagai bahan bakar boiler dan pembangkit listrik.</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">60<small>%</small></span>
+                            <span class="stat-label">Efisiensi Energi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">30<small>%</small></span>
+                            <span class="stat-label">Emisi Lebih Rendah</span>
+                        </div>
+                    </div>
+                    <button class="card-learn-more" data-modal="modal2">
+                        Pelajari <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="card-bg-pattern"></div>
+            </div>
+
+            <!-- Card 3: Alat Pelindung Pekerja -->
+            <div class="feature-card-large animate-on-scroll delay-2" data-feature="3">
+                <div class="card-glow"></div>
+                <div class="card-icon">
+                    <i class="fas fa-helmet-safety"></i>
+                    <div class="icon-ring"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-number">03</span>
+                    <h3>Alat Pelindung Pekerja</h3>
+                    <p>Standar APD lengkap: helmet, sarung tangan, sepatu safety, rompi reflektor, dan masker respirator.</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">100<small>%</small></span>
+                            <span class="stat-label">Kepatuhan APD</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">0<small>%</small></span>
+                            <span class="stat-label">Kecelakaan Kerja</span>
+                        </div>
+                    </div>
+                    <button class="card-learn-more" data-modal="modal3">
+                        Pelajari <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="card-bg-pattern"></div>
+            </div>
+
+            <!-- Card 4: Area Bahaya Pabrik -->
+            <div class="feature-card-large animate-on-scroll delay-3" data-feature="4">
+                <div class="card-glow"></div>
+                <div class="card-icon">
+                    <i class="fas fa-triangle-exclamation"></i>
+                    <div class="icon-ring"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-number">04</span>
+                    <h3>Area Bahaya Pabrik</h3>
+                    <p>Identifikasi zona merah: boiler, digester, screw press, dan area kelistrikan tegangan tinggi.</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">12<small>Zona</small></span>
+                            <span class="stat-label">Area Teridentifikasi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">24/7<small></small></span>
+                            <span class="stat-label">Monitoring</span>
+                        </div>
+                    </div>
+                    <button class="card-learn-more" data-modal="modal4">
+                        Pelajari <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="card-bg-pattern"></div>
+            </div>
+
+            <!-- Card 5: Tips Keselamatan -->
+            <div class="feature-card-large animate-on-scroll delay-4" data-feature="5">
+                <div class="card-glow"></div>
+                <div class="card-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                    <div class="icon-ring"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-number">05</span>
+                    <h3>Tips Keselamatan</h3>
+                    <p>Panduan praktis K3 untuk pekerja pabrik, operator alat berat, dan tim panen di kebun sawit.</p>
+                    <div class="safety-tips-preview">
+                        <span><i class="fas fa-check-circle"></i> Briefing sebelum kerja</span>
+                        <span><i class="fas fa-check-circle"></i> Pengecekan APD</span>
+                        <span><i class="fas fa-check-circle"></i> Evakuasi darurat</span>
+                    </div>
+                    <button class="card-learn-more" data-modal="modal5">
+                        Pelajari <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="card-bg-pattern"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION: INOVASI LINGKUNGAN ==================== -->
+    <section class="innovation-section">
+        <div class="innovation-container">
+            <div class="innovation-left animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-charging-station"></i> ZERO WASTE</span>
+                <h2>Dari Limbah Menjadi <span class="highlight">Berkah</span></h2>
+                <p>Teknologi modern mengubah limbah sawit menjadi energi terbarukan dan produk bernilai ekonomi tinggi.</p>
+                <div class="innovation-steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-text">
+                            <h4>POME → Biogas</h4>
+                            <p>Mengolah limbah cair menjadi metana untuk pembangkit listrik</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-text">
+                            <h4>TKKS → Kompos</h4>
+                            <p>Tandan kosong diolah menjadi pupuk organik premium</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-text">
+                            <h4>Cangkang → Biochar</h4>
+                            <p>Karbon aktif untuk filtrasi dan remediasi lahan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="innovation-right animate-on-scroll delay-1">
+                <div class="eco-cycle">
+                    <div class="cycle-center">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="cycle-item cycle-1">
+                        <i class="fas fa-tint"></i>
+                        <span>Limbah Cair</span>
+                    </div>
+                    <div class="cycle-item cycle-2">
+                        <i class="fas fa-leaf"></i>
+                        <span>Limbah Padat</span>
+                    </div>
+                    <div class="cycle-item cycle-3">
+                        <i class="fas fa-charging-station"></i>
+                        <span>Energi</span>
+                    </div>
+                    <div class="cycle-item cycle-4">
+                        <i class="fas fa-apple-alt"></i>
+                        <span>Pupuk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION: AREA BAHAYA (ZONA MAP) ==================== -->
+    <section class="danger-zone-section">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-map-marked-alt"></i> HAZARD MAPPING</span>
+            <h2>Pemetaan <span class="highlight">Area Bahaya</span> Pabrik</h2>
+            <p>Identifikasi zona risiko tinggi untuk pencegahan kecelakaan kerja</p>
+        </div>
+
+        <div class="zone-container">
+            <div class="zone-map animate-on-scroll">
+                <div class="map-placeholder">
+                    <div class="zone-marker marker-1" data-zone="boiler">
+                        <i class="fas fa-fire"></i>
+                        <span class="zone-tooltip">Area Boiler<br>Suhu tinggi, risiko ledakan</span>
+                    </div>
+                    <div class="zone-marker marker-2" data-zone="digester">
+                        <i class="fas fa-cogs"></i>
+                        <span class="zone-tooltip">Area Digester<br>Mesin berputar, jepit</span>
+                    </div>
+                    <div class="zone-marker marker-3" data-zone="electrical">
+                        <i class="fas fa-bolt"></i>
+                        <span class="zone-tooltip">Area Kelistrikan<br>Tegangan tinggi</span>
+                    </div>
+                    <div class="zone-marker marker-4" data-zone="chemical">
+                        <i class="fas fa-flask"></i>
+                        <span class="zone-tooltip">Area Kimia<br>Bahan berbahaya</span>
+                    </div>
+                    <div class="zone-marker marker-5" data-zone="loading">
+                        <i class="fas fa-truck"></i>
+                        <span class="zone-tooltip">Area Loading<br>Alat berat bergerak</span>
+                    </div>
+                    <div class="zone-grid"></div>
+                </div>
+            </div>
+            <div class="zone-list animate-on-scroll delay-1">
+                <h3>Zona Bahaya Prioritas</h3>
+                <div class="zone-item">
+                    <div class="zone-color red"></div>
+                    <div class="zone-info">
+                        <strong>Zona Merah (High Risk)</strong>
+                        <p>Boiler, Ruang Panel Listrik, Tangki Kimia</p>
+                    </div>
+                    <span class="zone-status danger">Akses Terbatas</span>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-color yellow"></div>
+                    <div class="zone-info">
+                        <strong>Zona Kuning (Medium Risk)</strong>
+                        <p>Area Pressing, Conveyor, Loading Ramp</p>
+                    </div>
+                    <span class="zone-status warning">Wajib APD</span>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-color green"></div>
+                    <div class="zone-info">
+                        <strong>Zona Hijau (Low Risk)</strong>
+                        <p>Kantor, Area Parkir, Kantin</p>
+                    </div>
+                    <span class="zone-status safe">Aman</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION: TIPS KESELAMATAN (INTERAKTIF) ==================== -->
+    <section class="safety-tips-section">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-shield-alt"></i> SAFETY FIRST</span>
+            <h2>10 Tips Keselamatan <span class="highlight">Kerja</span></h2>
+            <p>Panduan praktis mencegah kecelakaan di perkebunan dan pabrik kelapa sawit</p>
+        </div>
+
+        <div class="tips-container">
+            <div class="tip-card animate-on-scroll" data-tip="1">
+                <div class="tip-number">01</div>
+                <div class="tip-content">
+                    <i class="fas fa-hard-hat"></i>
+                    <h4>Gunakan APD Lengkap</h4>
+                    <p>Helm, sepatu safety, sarung tangan, rompi reflektor, dan masker wajib dipakai saat bekerja.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-1" data-tip="2">
+                <div class="tip-number">02</div>
+                <div class="tip-content">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>Briefing Sebelum Kerja</h4>
+                    <p>Lakukan safety talk setiap pagi untuk mengingatkan prosedur keselamatan.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-2" data-tip="3">
+                <div class="tip-number">03</div>
+                <div class="tip-content">
+                    <i class="fas fa-hand-paper"></i>
+                    <h4>Patuhi Rambu Peringatan</h4>
+                    <p>Perhatikan dan patuhi semua rambu K3 yang terpasang di area pabrik.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-3" data-tip="4">
+                <div class="tip-number">04</div>
+                <div class="tip-content">
+                    <i class="fas fa-fire-extinguisher"></i>
+                    <h4>Kenali Titik APAR</h4>
+                    <p>Pastikan tahu lokasi Alat Pemadam Api Ringan dan cara menggunakannya.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-4" data-tip="5">
+                <div class="tip-number">05</div>
+                <div class="tip-content">
+                    <i class="fas fa-people-arrows"></i>
+                    <h4>Jaga Jarak Aman</h4>
+                    <p>Jangan berdekatan dengan mesin berputar atau area loading alat berat.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-5" data-tip="6">
+                <div class="tip-number">06</div>
+                <div class="tip-content">
+                    <i class="fas fa-tint"></i>
+                    <h4>Waspada Lantai Licin</h4>
+                    <p>Area sekitar mesin dan pengolahan limbah rawan licin, gunakan alas kaki anti-slip.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-6" data-tip="7">
+                <div class="tip-number">07</div>
+                <div class="tip-content">
+                    <i class="fas fa-lungs"></i>
+                    <h4>Gunakan Masker di Area Debu</h4>
+                    <p>Area fiber dan penggilingan menghasilkan debu yang berbahaya bagi pernapasan.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-7" data-tip="8">
+                <div class="tip-number">08</div>
+                <div class="tip-content">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Simpan Nomor Darurat</h4>
+                    <p>Pastikan nomor call center darurat dan pos P3K mudah diakses.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-8" data-tip="9">
+                <div class="tip-number">09</div>
+                <div class="tip-content">
+                    <i class="fas fa-couch"></i>
+                    <h4>Istirahat yang Cukup</h4>
+                    <p>Pekerja yang lelah meningkatkan risiko kecelakaan kerja.</p>
+                </div>
+            </div>
+            <div class="tip-card animate-on-scroll delay-9" data-tip="10">
+                <div class="tip-number">10</div>
+                <div class="tip-content">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h4>Laporkan Insiden</h4>
+                    <p>Segera laporkan setiap kejadian atau near miss ke tim K3 untuk evaluasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-eco">
+        <div class="cta-glow"></div>
+        <div class="cta-content animate-on-scroll">
+            <span class="cta-tag">ZERO ACCIDENT, ZERO WASTE</span>
+            <h2>Wujudkan <span class="highlight">Sawit Berkelanjutan</span> dengan Kami</h2>
+            <p>Bersama menuju industri kelapa sawit yang aman bagi pekerja dan ramah lingkungan</p>
+            <div class="cta-buttons">
+                <button class="btn-primary">Download Panduan K3</button>
+                <button class="btn-secondary">Konsultasi Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>PalmInsight</h2>
+                <p>Platform digital untuk pengelolaan perkebunan kelapa sawit yang aman, modern, dan berkelanjutan.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Eco & K3</h3>
+                <a href="#">Pengolahan Limbah</a>
+                <a href="#">Energi Biomassa</a>
+                <a href="#">Standar APD</a>
+                <a href="#">Panduan K3</a>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <a href="#">Sertifikasi ISPO</a>
+                <a href="#">RSPO</a>
+                <a href="#">Sustainability Report</a>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 PalmInsight. All Rights Reserved | Mendukung Sawit Berkelanjutan & Zero Accident</p>
+        </div>
+    </footer>
+
+    <!-- Modal untuk detail fitur -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <i class="fas fa-recycle modal-icon"></i>
+            <h2>Pengolahan Limbah Sawit</h2>
+            <p>Limbah cair POME diolah melalui sistem kolam anaerobik dan aerobik menghasilkan biogas sebagai sumber energi. Limbah padat TKKS dikomposkan menjadi pupuk organik berkualitas tinggi yang dapat digunakan kembali ke kebun sawit.</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Reduksi BOD hingga 85%</li>
+                <li><i class="fas fa-check-circle"></i> Produksi biogas 28 m³/ton TBS</li>
+                <li><i class="fas fa-check-circle"></i> Pupuk organik 500 kg/ha/tahun</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <i class="fas fa-bolt modal-icon"></i>
+            <h2>Energi Biomassa</h2>
+            <p>Cangkang sawit, serat, dan tandan kosong digunakan sebagai bahan bakar boiler untuk menghasilkan uap dan listrik, mengurangi ketergantungan pada bahan bakar fosil.</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Nilai kalor 4.200 kcal/kg (cangkang)</li>
+                <li><i class="fas fa-check-circle"></i> Suplai listrik 3-5 MW/pabrik</li>
+                <li><i class="fas fa-check-circle"></i> Penurunan emisi CO₂ 30-40%</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <i class="fas fa-helmet-safety modal-icon"></i>
+            <h2>Alat Pelindung Pekerja</h2>
+            <p>Standar APD lengkap sesuai regulasi K3 untuk seluruh pekerja di area perkebunan dan pabrik pengolahan sawit.</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Safety Helmet (SNI)</li>
+                <li><i class="fas fa-check-circle"></i> Safety Shoes anti-slip & anti-penetrasi</li>
+                <li><i class="fas fa-check-circle"></i> Sarung tangan tahan panas & kimia</li>
+                <li><i class="fas fa-check-circle"></i> Rompi reflektor high-visibility</li>
+                <li><i class="fas fa-check-circle"></i> Masker N95 untuk area debu</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <i class="fas fa-triangle-exclamation modal-icon"></i>
+            <h2>Area Bahaya Pabrik</h2>
+            <p>Identifikasi dan pemetaan zona berisiko tinggi di pabrik kelapa sawit untuk pencegahan kecelakaan kerja.</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Area Boiler (suhu tinggi, risiko ledakan)</li>
+                <li><i class="fas fa-check-circle"></i> Area Digester & Pressing (mesin berputar)</li>
+                <li><i class="fas fa-check-circle"></i> Ruang Panel Listrik (tegangan tinggi)</li>
+                <li><i class="fas fa-check-circle"></i> Tangki & Pipa Kimia (bahan korosif)</li>
+                <li><i class="fas fa-check-circle"></i> Loading Ramp (alat berat bergerak)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <i class="fas fa-clipboard-list modal-icon"></i>
+            <h2>Tips Keselamatan Kerja</h2>
+            <p>10 tips praktis untuk mencegah kecelakaan di lingkungan kerja perkebunan dan pabrik sawit.</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Lakukan safety briefing setiap hari</li>
+                <li><i class="fas fa-check-circle"></i> Periksa APD sebelum digunakan</li>
+                <li><i class="fas fa-check-circle"></i> Patuhi rambu dan prosedur K3</li>
+                <li><i class="fas fa-check-circle"></i> Kenali rute evakuasi darurat</li>
+                <li><i class="fas fa-check-circle"></i> Laporkan setiap insiden atau near miss</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/eco-k3.js"></script>
+</body>
+</html>
