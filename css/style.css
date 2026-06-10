@@ -36,7 +36,6 @@ nav {
 
 .logo a {
     text-decoration: none;
-    font-family: 'Segoe UI', sans-serif;
     color: #00ff99;
     font-size: 22px;
     font-weight: 700;
@@ -55,7 +54,6 @@ nav {
 
 .nav-menu li a {
     text-decoration: none;
-    font-family: 'Segoe UI', sans-serif;
     color: rgba(255, 255, 255, 0.85);
     font-size: 15px;
     padding: 8px 18px;
@@ -75,30 +73,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.signin-btn {
-    background: transparent;
-    border: 1.5px solid rgba(0, 255, 153, 0.6);
-    border-radius: 40px;
-    padding: 8px 24px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: none;
-}
-
-.signin-btn:hover {
-    background: rgba(0, 255, 153, 0.15);
-    transform: translateY(-1px);
-    border-color: #00ff99;
-}
-
-.signin-btn a {
-    color: #00ff99;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    text-decoration: none;
 }
 
 /* Mobile Menu Toggle (Hamburger) */
@@ -181,25 +155,6 @@ nav {
         background: rgba(0, 255, 153, 0.15);
         padding-left: 28px;
     }
-    
-    .signin-btn {
-        padding: 6px 20px;
-    }
-    
-    .signin-btn a {
-        font-size: 13px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .nav-menu {
-        gap: 4px;
-    }
-    
-    .nav-menu li a {
-        padding: 8px 14px;
-        font-size: 14px;
-    }
 }
 
 /* ==================== HERO SECTION (Tambahan stats) ==================== */
@@ -271,7 +226,6 @@ nav {
     font-size: 70px;
     line-height: 1.1;
     margin-bottom: 20px;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 .hero-text h1 span {
@@ -316,22 +270,6 @@ nav {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(4,170,109,.5);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: white;
-    border: 1px solid rgba(255,255,255,.4);
-    cursor: pointer;
-    padding: 14px 32px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: .3s ease;
-}
-
-.btn-secondary:hover {
-    background: rgba(255,255,255,.1);
-    border-color: white;
 }
 
 .hero-image {
@@ -661,7 +599,6 @@ nav {
     font-size: 64px;
     line-height: 1.1;
     color: #111;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 .cta-content h2 span {
@@ -732,7 +669,6 @@ nav {
     font-size: 38px;
     color: #00ff99;
     margin-bottom: 20px;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-brand p {
@@ -806,7 +742,6 @@ nav {
     .ring-1 { width: 320px; height: 320px; }
     .ring-2 { width: 270px; height: 270px; }
     .ring-3 { width: 230px; height: 230px; }
-    .about-left h2 { font-size: 48px; }
     .features-header h2 { font-size: 48px; }
     .cta-content h2 { font-size: 48px; }
 }
@@ -828,10 +763,6 @@ nav {
     .hero-stats { justify-content: center; gap: 25px; }
     .hero-stats .stat h3 { font-size: 22px; }
     .about { padding: 80px 5%; }
-    .about-top { flex-direction: column; gap: 40px; }
-    .about-left h2 { font-size: 36px; }
-    .about-right p { font-size: 16px; }
-    .about-image { height: 300px; }
     .features { padding: 80px 5%; }
     .features-header h2 { font-size: 36px; }
     .feature-grid { grid-template-columns: 1fr; }
@@ -847,8 +778,7 @@ nav {
 
 @media (max-width: 480px) {
     .hero-text h1 { font-size: 28px; }
-    .btn-primary, .btn-secondary { padding: 10px 20px; font-size: 14px; }
-    .about-left h2 { font-size: 28px; }
+    .btn-primary { padding: 10px 20px; font-size: 14px; }
     .features-header h2 { font-size: 28px; }
     .cta-content h2 { font-size: 28px; }
     .feature-title { font-size: 18px; }

@@ -306,15 +306,6 @@ body{
     color:black;
 }
 
-::-webkit-scrollbar{
-    width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-    background:var(--primary);
-    border-radius:20px;
-}
-
 @media(max-width:1100px){
 
     .calculator-wrapper{

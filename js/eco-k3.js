@@ -131,3 +131,21 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
     createParticles();
 });
+
+document.querySelectorAll('.hazard-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+
+        const item = btn.parentElement;
+
+        document
+            .querySelectorAll('.hazard-item')
+            .forEach(el => {
+                if(el !== item){
+                    el.classList.remove('active');
+                }
+            });
+
+        item.classList.toggle('active');
+
+    });
+});
