@@ -1,4 +1,3 @@
-/* ==================== RESET & VARIABLES ==================== */
 * {
     margin: 0;
     padding: 0;
@@ -1046,4 +1045,4 @@ nav {
     .hero-text h1 { font-size: 28px; }
     .card-stats { flex-direction: column; gap: 12px; }
     .tip-card { flex-direction: column; text-align: center; align-items: center; }
-}
+} 

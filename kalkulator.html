@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Laba Sawit</title>
+    <link rel="stylesheet" href="css/kalkulator.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <main class="calculator-wrapper">
+        <section class="calculator-card">
+            <div class="header">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div>
+                    <h1>Kalkulator Laba Sawit</h1>
+                    <p>
+                        Hitung estimasi keuntungan kebun kelapa sawit
+                        secara cepat dan akurat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>
+                        <i class="fa-solid fa-map"></i>
+                        Luas Lahan (Ha)
+                    </label>
+                    <input type="number" id="luasLahan" placeholder="Contoh: 40">
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <i class="fa-solid fa-chart-column"></i>
+                        Produksi per Hektar (Ton/Ha)
+                    </label>
+                    <input type="number" id="produksiPerHa" placeholder="Contoh: 20">
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <i class="fa-solid fa-coins"></i>
+                        Harga TBS (Rp/Kg)
+                    </label>
+                    <input type="number" id="hargaTbs" placeholder="Contoh: 3400">
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <i class="fa-solid fa-gear"></i>
+                        Biaya Operasional
+                    </label>
+                    <input type="number" id="biayaOperasional" placeholder="Contoh: 15000000">
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        Biaya Perawatan / Tahun
+                    </label>
+                    <input type="number" id="biayaPerawatan" placeholder="Contoh: 9000000">
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <i class="fa-solid fa-users"></i>
+                        Biaya Tenaga Kerja / Tahun
+                    </label>
+                    <input type="number" id="biayaTenaga" placeholder="Contoh: 8000000">
+                </div>
+            </div>
+
+            <button class="btn-hitung" onclick="hitungLaba()">
+                <i class="fa-solid fa-calculator"></i>
+                Hitung Laba
+            </button>
+
+            <a href="index.html">
+                <button class="btn-hitung">
+                    Kembali ke Beranda
+                </button>
+            </a>
+        </section>
+
+        <aside class="hasil-popup" id="hasilPopup">
+            <div class="hasil-card" id="hasilPDF">
+                <div class="hasil-header">
+                    <div>
+                        <h2>
+                            <i class="fa-solid fa-chart-line"></i>
+                            Hasil Analisis
+                        </h2>
+                        <p>Estimasi keuntungan tahunan kebun sawit</p>
+                    </div>
+
+                    <button class="close-popup"
+                        onclick="closeHasil()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div id="hasil">
+                    <div class="empty-state">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <h3>Belum Ada Perhitungan</h3>
+                        <p>
+                            Masukkan data lalu klik
+                            tombol Hitung Laba.
+                        </p>
+                    </div>
+                </div>
+
+                <button class="btn-pdf"
+                    onclick="cetakPDF()">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    Export PDF
+                </button>
+            </div>
+        </aside>
+    </main>
+    <script src="js/kalkulator.js"></script>
+</body>
+</html>

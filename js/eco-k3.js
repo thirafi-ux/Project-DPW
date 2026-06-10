@@ -50,9 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtns = document.querySelectorAll('.modal-close');
     
     learnMoreBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const modalId = btn.getAttribute('data-modal');
+        btn.addEventListener('click', (e) => {
+
+            const modalId = btn.dataset.modal;
+
+            if (!modalId) return;
+
+            e.preventDefault();
+
             const modal = document.getElementById(modalId);
+
             if (modal) {
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
