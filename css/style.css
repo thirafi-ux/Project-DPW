@@ -414,43 +414,7 @@ nav {
     letter-spacing:2px;
 }
 
-/* RESPONSIVE */
 
-@media(max-width:1024px){
-
-    .about-container{
-        grid-template-columns:1fr;
-    }
-
-    .about-content h2{
-        font-size:48px;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .about{
-        padding:80px 5%;
-    }
-
-    .about-image-side img{
-        height:350px;
-    }
-
-    .about-content h2{
-        font-size:36px;
-    }
-
-    .about-content p{
-        font-size:16px;
-    }
-
-    .about-stats{
-        grid-template-columns:1fr;
-    }
-
-}
 
 .features {
     background: #f8f8f8;
@@ -627,6 +591,149 @@ nav {
     margin-bottom: 80px;
     background: linear-gradient(90deg, transparent, #000000, transparent);
 }
+/* ================= PANEL STATISTIK ================= */
+.top-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 20px;
+}
+
+.header-titles{
+    text-align: center;
+    max-width: 800px;
+}
+
+.header-titles h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #04AA6D;
+}
+
+.header-titles p{
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0;
+}
+.chart-panel{
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px black;
+}
+
+/* ================= HEADER ================= */
+
+.panel-header{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.panel-header h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+
+.chart-tabs{
+    background: rgba(255,255,255,0.05);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.tab{
+    color: var(--primary);
+    background: #04AA6D;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ================= LABEL SAMPING ================= */
+
+.chart-y-label{
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* ================= SVG ================= */
+
+.svg-container{
+    width: 100%;
+    max-width: 800px;
+    height: 260px;
+    margin: auto;
+}
+
+#svgLineChart{
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* ================= AREA HIJAU ================= */
+
+.chart-area{
+    fill: url(#chartGradient);
+}
+
+/* ================= GARIS GRAFIK ================= */
+
+.chart-line{
+    fill: none;
+    stroke: #4ADE80;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ================= TITIK DATA ================= */
+
+.chart-point{
+    fill: #4ADE80;
+    stroke: #151D21;
+    stroke-width: 3;
+}
+
+/* ================= ANGKA DI ATAS TITIK ================= */
+
+.chart-point-label{
+    fill: #8E9E9D;
+    font-size: 12px;
+    font-weight: 600;
+    text-anchor: middle;
+}
+
+/* ================= LABEL TAHUN ================= */
+
+.chart-labels{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 15px;
+    padding-top: 12px;
+}
+
+.chart-label-text{
+    flex: 1;
+    text-align: center;
+    color: #8E9E9D;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
 
 .footer {
     position: relative;
@@ -783,159 +890,4 @@ nav {
     .cta-content h2 { font-size: 28px; }
     .feature-title { font-size: 18px; }
 }
-/* SMART MONITORING */
-:root {
-    --bg-card: #151D21;
-    --primary: #4ADE80;
-    --text-main: #FFFFFF;
-    --text-muted: #8E9E9D;
-    --border: rgba(255,255,255,0.05);
-}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Inter,sans-serif;
-}
-
-body{
-    background:#0E1418;
-    color:#FFFFFF;
-    padding:30px;
-}
-
-/* PANEL STATISTIK */
-
-.chart-panel{
-    background:var(--bg-card);
-    border:1px solid var(--border);
-    border-radius:16px;
-    padding:24px;
-    width:100%;
-}
-
-/* HEADER */
-
-.panel-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:20px;
-}
-
-.panel-header h2{
-    font-size:22px;
-    font-weight:600;
-}
-
-.chart-tabs{
-    background:rgba(255,255,255,0.05);
-    padding:4px;
-    border-radius:8px;
-}
-
-.tab{
-    color:var(--primary);
-    background:#183C2D;
-    padding:6px 14px;
-    border-radius:6px;
-    font-size:14px;
-}
-
-/* LABEL SAMPING */
-
-.chart-y-label{
-    color:var(--text-muted);
-    font-size:12px;
-    margin-bottom:10px;
-}
-
-/* SVG */
-
-.svg-container{
-    width:100%;
-    height:250px;
-}
-
-#svgLineChart{
-    width:100%;
-    height:100%;
-    overflow:visible;
-}
-
-/* AREA HIJAU */
-
-.chart-area{
-    fill:url(#chartGradient);
-}
-
-/* GARIS GRAFIK */
-
-.chart-line{
-    fill:none;
-    stroke:#4ADE80;
-    stroke-width:3;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-}
-
-/* TITIK */
-
-.chart-point{
-    fill:#4ADE80;
-    stroke:#151D21;
-    stroke-width:3;
-}
-
-/* ANGKA DI ATAS TITIK */
-
-.chart-point-label{
-    fill:#FFFFFF;
-    font-size:12px;
-    font-weight:600;
-    text-anchor:middle;
-}
-
-/* LABEL TAHUN */
-
-.chart-labels{
-    display:flex;
-    justify-content:space-between;
-    border-top:1px solid rgba(255,255,255,0.05);
-    margin-top:10px;
-    padding-top:10px;
-}
-
-.chart-label-text{
-    flex:1;
-    text-align:center;
-    color:#8E9E9D;
-    font-size:13px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .chart-panel{
-        padding:15px;
-    }
-
-    .panel-header h2{
-        font-size:18px;
-    }
-
-    .svg-container{
-        height:200px;
-    }
-
-    .chart-point-label{
-        font-size:10px;
-    }
-
-    .chart-label-text{
-        font-size:11px;
-    }
-
-}

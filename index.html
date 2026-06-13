@@ -163,6 +163,34 @@
             </div>
         </div>
     </section>
+    <div class="app-layout">
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- HEADER -->
+            <header class="top-header">
+                <div class="header-titles">
+                    <h1>Smart Monitoring</h1>
+                    <p>Monitoring Produksi dan Kualitas <span>Kelapa Sawit</span></p>
+                </div>
+            </header>
+            <!-- MIDDLE SECTION (CHART & SUMMARY) -->
+            <div class="middle-grid">
+                <div class="chart-panel">
+                    <div class="panel-header">
+                        <h2>Statistik Panen</h2>
+                        <div class="chart-tabs">
+                            <span class="tab active">Tahunan</span>
+                        </div>
+                    </div>
+                    <div class="chart-y-label">(Juta Ton)</div>
+                    <div class="svg-container">
+                        <svg id="svgLineChart" viewBox="0 0 1000 250" preserveAspectRatio="none"></svg>
+                    </div>
+                    <div id="chartLabels" class="chart-labels"></div>
+                </div>
+            </div>
+        </main>
+    </div>
 
     <footer class="footer">
         <div class="footer-line"></div>
@@ -211,34 +239,7 @@
             </div>
         </div>
 
-        <div class="app-layout">
-            <!-- MAIN CONTENT -->
-            <main class="main-content">
-                <!-- HEADER -->
-                <header class="top-header">
-                    <div class="header-titles">
-                        <h1>Smart Monitoring</h1>
-                        <p>Monitoring Produksi dan Kualitas <span>Kelapa Sawit</span></p>
-                    </div>
-                </header>
-                <!-- MIDDLE SECTION (CHART & SUMMARY) -->
-                <div class="middle-grid">
-                    <div class="chart-panel">
-                        <div class="panel-header">
-                            <h2>Statistik Panen</h2>
-                            <div class="chart-tabs">
-                                <span class="tab active">Tahunan</span>
-                            </div>
-                        </div>
-                        <div class="chart-y-label">(Juta Ton)</div>
-                        <div class="svg-container">
-                            <svg id="svgLineChart" viewBox="0 0 1000 250" preserveAspectRatio="none"></svg>
-                        </div>
-                        <div id="chartLabels" class="chart-labels"></div>
-                    </div>
-                </div>
-            </main>
-        </div>
+ 
 
         <div class="footer-bottom">
             <p>© 2026 PalmInsight. All Rights Reserved.</p>
