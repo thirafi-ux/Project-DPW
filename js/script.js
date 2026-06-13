@@ -209,6 +209,26 @@ function buatGrafik() {
     });
 
     svg.innerHTML = svgContent;
+    updateStatistik();
+}
+
+// ==================== RINGKASAN STATISTIK ====================
+function updateStatistik() {
+    const data = dataPanen.data;
+    const labels = dataPanen.labels;
+
+    const total = data.reduce((a, b) => a + b, 0);
+    const avg = total / data.length;
+
+    const maxVal = Math.max(...data);
+    const maxIdx = data.indexOf(maxVal);
+    const minVal = Math.min(...data);
+    const minIdx = data.indexOf(minVal);
+
+    document.getElementById("avgProduksi").innerHTML = formatJuta(avg) + " Juta Ton";
+    document.getElementById("maxProduksi").innerHTML = formatJuta(maxVal) + " Juta Ton (" + labels[maxIdx] + ")";
+    document.getElementById("minProduksi").innerHTML = formatJuta(minVal) + " Juta Ton (" + labels[minIdx] + ")";
+    document.getElementById("totalProduksiAll").innerHTML = formatJuta(total) + " Juta Ton";
 }
 
 document.addEventListener("DOMContentLoaded", function(){
