@@ -783,76 +783,159 @@ nav {
     .cta-content h2 { font-size: 28px; }
     .feature-title { font-size: 18px; }
 }
-
-/* LAYOUT */
-.app-layout {
-    display: flex;
-    min-height: 100vh;
+/* SMART MONITORING */
+:root {
+    --bg-card: #151D21;
+    --primary: #4ADE80;
+    --text-main: #FFFFFF;
+    --text-muted: #8E9E9D;
+    --border: rgba(255,255,255,0.05);
 }
 
-/* MAIN CONTENT */
-.main-content {
-    flex: 1;
-    padding: 30px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-    max-width: 100%;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,sans-serif;
+}
+
+body{
+    background:#0E1418;
+    color:#FFFFFF;
+    padding:30px;
+}
+
+/* PANEL STATISTIK */
+
+.chart-panel{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px;
+    width:100%;
 }
 
 /* HEADER */
-.top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.panel-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
 }
 
-.header-titles h1 {
-    font-size: 1.7rem;
-    font-weight: 600;
-    margin-bottom: 5px;
+.panel-header h2{
+    font-size:22px;
+    font-weight:600;
 }
 
-.header-titles p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
+.chart-tabs{
+    background:rgba(255,255,255,0.05);
+    padding:4px;
+    border-radius:8px;
 }
 
-.header-titles p span {
-    color: var(--primary);
+.tab{
+    color:var(--primary);
+    background:#183C2D;
+    padding:6px 14px;
+    border-radius:6px;
+    font-size:14px;
 }
 
-/* MIDDLE SECTION */
-.middle-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
+/* LABEL SAMPING */
+
+.chart-y-label{
+    color:var(--text-muted);
+    font-size:12px;
+    margin-bottom:10px;
 }
 
-.chart-panel, .summary-panel {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
+/* SVG */
+
+.svg-container{
+    width:100%;
+    height:250px;
 }
 
-.panel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+#svgLineChart{
+    width:100%;
+    height:100%;
+    overflow:visible;
 }
 
-.panel-header h2 {
-    font-size: 1.1rem;
-    font-weight: 600;
+/* AREA HIJAU */
+
+.chart-area{
+    fill:url(#chartGradient);
 }
 
-.chart-tabs {
-    display: flex;
-    background: rgba(0,0,0,0.3);
-    border-radius: 8px;
-    padding: 4px;
-    border: 1px solid var(--border);
+/* GARIS GRAFIK */
+
+.chart-line{
+    fill:none;
+    stroke:#4ADE80;
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+/* TITIK */
+
+.chart-point{
+    fill:#4ADE80;
+    stroke:#151D21;
+    stroke-width:3;
+}
+
+/* ANGKA DI ATAS TITIK */
+
+.chart-point-label{
+    fill:#FFFFFF;
+    font-size:12px;
+    font-weight:600;
+    text-anchor:middle;
+}
+
+/* LABEL TAHUN */
+
+.chart-labels{
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid rgba(255,255,255,0.05);
+    margin-top:10px;
+    padding-top:10px;
+}
+
+.chart-label-text{
+    flex:1;
+    text-align:center;
+    color:#8E9E9D;
+    font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .chart-panel{
+        padding:15px;
+    }
+
+    .panel-header h2{
+        font-size:18px;
+    }
+
+    .svg-container{
+        height:200px;
+    }
+
+    .chart-point-label{
+        font-size:10px;
+    }
+
+    .chart-label-text{
+        font-size:11px;
+    }
+
 }
