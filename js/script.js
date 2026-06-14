@@ -1,236 +1,146 @@
-const palmFruit =
-document.getElementById("palmFruit");
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener("mousemove",(e)=>{
+    // ================= MOBILE MENU =================
+    const menuToggle = document.getElementById("mobileMenuToggle");
+    const navMenu = document.getElementById("navMenu");
 
-    let x =
-    (window.innerWidth/2 - e.clientX)/30;
-
-    let y =
-    (window.innerHeight/2 - e.clientY)/30;
-
-    palmFruit.style.transform =
-    `rotateY(${x}deg)
-     rotateX(${-y}deg)`;
-
-});
-
-// ==================== MOBILE MENU TOGGLE ====================
-// Menunggu DOM selesai loading
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('mobileMenuToggle');
-    const navMenu = document.getElementById('navMenu');
-    
-    // Cek apakah elemen ditemukan
     if (menuToggle && navMenu) {
-        // Toggle menu saat hamburger diklik
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            navMenu.classList.toggle("active");
         });
-        
-        // Tutup menu saat klik link di dalam menu (opsional)
-        const menuLinks = navMenu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
+
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                menuToggle.classList.remove("active");
+                navMenu.classList.remove("active");
             });
         });
-        
-        // Tutup menu saat klik di luar menu (untuk user experience lebih baik)
-        document.addEventListener('click', function(event) {
-            const isClickInsideNav = navMenu.contains(event.target) || menuToggle.contains(event.target);
-            if (!isClickInsideNav && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
+
+        document.addEventListener("click", (e) => {
+
+            const insideNav =
+                navMenu.contains(e.target) ||
+                menuToggle.contains(e.target);
+
+            if (!insideNav) {
+                menuToggle.classList.remove("active");
+                navMenu.classList.remove("active");
             }
+
         });
     }
-    
-    // ==================== SMOOTH SCROLL (Opsional) ====================
-    const allLinks = document.querySelectorAll('a[href^="#"]');
-    allLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (targetId !== '#' && targetId !== '') {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+
+    const navbar = document.querySelector("nav");
+
+        window.addEventListener("scroll",()=>{
+
+            if(window.scrollY > 80){
+                navbar.classList.add("scrolled");
+            }else{
+                navbar.classList.remove("scrolled");
+            }
+
+        });
+
+    // ================= SCROLL ANIMATION =================
+    const animatedItems =
+        document.querySelectorAll(
+        ".animate-on-scroll,.fade-left,.fade-right,.scale-up"
+        );
+
+        const animationObserver =
+        new IntersectionObserver((entries)=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("visible");
+
+                    animationObserver.unobserve(entry.target);
+
                 }
-            }
+
+            });
+
+        },{
+            threshold:0.15
         });
-    });
-});
 
-// ==================== SMART MONITORING ====================
-const dataPanen = {
-    labels: ["2020", "2021", "2022", "2023", "2024", "2025", "2026"],
-    data: [48300000, 46220000, 46820000, 46990000, 48160000, 51660000, 49800000]
-};
+        animatedItems.forEach(item=>{
+            animationObserver.observe(item);
+        });
 
-function formatJuta(nilai) {
-    return (nilai / 1000000).toLocaleString("id-ID", {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
-}
+    const revealItems = () => {
 
-function buatGrafik() {
+        animatedItems.forEach(item => {
 
-    const svg = document.getElementById("svgLineChart");
-    const labels = document.getElementById("chartLabels");
+            const rect =
+                item.getBoundingClientRect();
 
-    const width = 1000;
-    const height = 220;
-    const paddingTop = 30;
-    const paddingBottom = 10;
-    const maxValue = 60000000;
+            if (rect.top < window.innerHeight - 100) {
+                item.classList.add("visible");
+            }
 
-    const drawHeight = height - paddingTop - paddingBottom;
+        });
 
-    const startX = 60;
-    const stepX = (width - startX) / (dataPanen.data.length - 1);
+    };
 
-    let svgContent = `
-        <defs>
-            <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="rgba(74,222,128,0.4)"/>
-                <stop offset="100%" stop-color="rgba(74,222,128,0)"/>
-            </linearGradient>
-        </defs>
-    `;
+    revealItems();
 
-    // Garis bantu horizontal
-    for(let i=0;i<=6;i++){
+    window.addEventListener("scroll", revealItems);
 
-        const nilai = i * 10000000;
-        const y = paddingTop + drawHeight - ((nilai / maxValue) * drawHeight);
+    // ================= WASTE CARD ANIMATION =================
+    const cards =
+        document.querySelectorAll(".waste-card");
 
-        svgContent += `
-            <line
-                x1="40"
-                y1="${y}"
-                x2="${width}"
-                y2="${y}"
-                stroke="rgba(255,255,255,0.05)"
-                stroke-width="1"/>
-        `;
+    const observer =
+        new IntersectionObserver((entries) => {
 
-        svgContent += `
-            <text
-                x="30"
-                y="${y+4}"
-                fill="#8E9E9D"
-                font-size="12"
-                text-anchor="end">
-                ${i*10}
-            </text>
-        `;
-    }
+            entries.forEach(entry => {
 
-    labels.innerHTML = "";
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
 
-    let pathLine = "";
-    let pathArea = `M ${startX} ${height}`;
+            });
 
-    dataPanen.data.forEach((nilai,index)=>{
+        }, {
+            threshold: 0.2
+        });
 
-        const x = startX + (index * stepX);
-        const y = paddingTop + drawHeight - ((nilai / maxValue) * drawHeight);
+    cards.forEach(card => observer.observe(card));
 
-        if(index==0){
-            pathLine += `M ${x} ${y}`;
-            pathArea += ` L ${x} ${y}`;
-        }else{
-            pathLine += ` L ${x} ${y}`;
-            pathArea += ` L ${x} ${y}`;
-        }
+    // ================= CHART TOOLTIP =================
+    const tooltip =
+        document.getElementById("chartTooltip");
+
+    const points =
+        document.querySelectorAll(".chart-point");
+
+    points.forEach(point => {
+
+        point.addEventListener("mousemove", (e) => {
+
+            tooltip.innerHTML = `
+                <strong>${point.dataset.year}</strong>
+                <br>
+                Produksi:
+                ${point.dataset.ton}
+            `;
+
+            tooltip.style.opacity = "1";
+            tooltip.style.left = `${e.pageX + 15}px`;
+            tooltip.style.top = `${e.pageY - 55}px`;
+
+        });
+
+        point.addEventListener("mouseleave", () => {
+            tooltip.style.opacity = "0";
+        });
 
     });
 
-    pathArea += ` L ${width} ${height} Z`;
-
-    // Area hijau
-    svgContent += `
-        <path
-            class="chart-area"
-            d="${pathArea}"
-            fill="url(#chartGradient)">
-        </path>
-    `;
-
-    // Garis grafik
-    svgContent += `
-        <path
-            class="chart-line"
-            d="${pathLine}">
-        </path>
-    `;
-
-    // Titik dan tulisan
-    dataPanen.data.forEach((nilai,index)=>{
-
-        const x = startX + (index * stepX);
-        const y = paddingTop + drawHeight - ((nilai / maxValue) * drawHeight);
-
-        svgContent += `
-            <circle
-                class="chart-point"
-                cx="${x}"
-                cy="${y}"
-                r="6">
-            </circle>
-        `;
-
-        svgContent += `
-            <text
-                class="chart-point-label"
-                x="${x}"
-                y="${y-12}">
-                ${formatJuta(nilai)}
-            </text>
-        `;
-
-        const tahun = document.createElement("div");
-        tahun.className = "chart-label-text";
-        tahun.innerText = dataPanen.labels[index];
-
-        if(index==0){
-            tahun.style.marginLeft = "45px";
-        }
-
-        labels.appendChild(tahun);
-
-    });
-
-    svg.innerHTML = svgContent;
-    updateStatistik();
-}
-
-// ==================== RINGKASAN STATISTIK ====================
-function updateStatistik() {
-    const data = dataPanen.data;
-    const labels = dataPanen.labels;
-
-    const total = data.reduce((a, b) => a + b, 0);
-    const avg = total / data.length;
-
-    const maxVal = Math.max(...data);
-    const maxIdx = data.indexOf(maxVal);
-    const minVal = Math.min(...data);
-    const minIdx = data.indexOf(minVal);
-
-    document.getElementById("avgProduksi").innerHTML = formatJuta(avg) + " Juta Ton";
-    document.getElementById("maxProduksi").innerHTML = formatJuta(maxVal) + " Juta Ton (" + labels[maxIdx] + ")";
-    document.getElementById("minProduksi").innerHTML = formatJuta(minVal) + " Juta Ton (" + labels[minIdx] + ")";
-    document.getElementById("totalProduksiAll").innerHTML = formatJuta(total) + " Juta Ton";
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-    buatGrafik();
 });

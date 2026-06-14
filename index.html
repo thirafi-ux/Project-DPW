@@ -5,21 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>PalmInsight - Smart Palm Oil Management</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <nav>
         <div class="navdiv">
             <div class="logo">
-                <a href="#">PalmInsight</a>
+                <a href="#">Palmmergy</a>
             </div>
             
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">winners</a></li>
-                <li><a href="#">Competition</a></li>
-                <li><a href="#">Announcement</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>
+                    <a href="#hero">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#process">Process</a>
+                </li>
+
+                <li>
+                    <a href="#innovation">Innovation</a>
+                </li>
+
+                <li>
+                    <a href="#monitoring">Monitoring</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
             
             <div class="nav-right">
@@ -32,122 +51,499 @@
         </div>
     </nav>
 
-    <header>
-        <section class="hero">
-            <div class="overlay"></div>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="event-year-badge">2026</div>
-                    <h1>
-                        Unleash Your Innovation in
-                        <span>Technology and Entertainment</span>
-                    </h1>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <h3>2026</h3>
-                            <p>EVENT YEAR</p>
-                        </div>
-                        <div class="stat">
-                            <h3>UTM</h3>
-                            <p>MADURA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hud-ring ring-1"></div>
-                    <div class="hud-ring ring-2"></div>
-                    <div class="hud-ring ring-3"></div>
-                    <img src="assets/biji.png" alt="Palm Fruit" id="palmFruit">
-                </div>
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-slogan">
+                <span>
+                    Sustainable Palm Innovation For A Better Future
+                </span>
             </div>
-        </section>
+        </div>
     </header>
 
-    <section class="about">
-        <div class="about-container">
-            <div class="about-image-side">
-                <img src="assets/sawit.jpg" alt="Palm Oil">
-            </div>
 
-            <div class="about-content">
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <figure class="about-visual fade-left">
+                <img src="assets/sawit.jpg" alt="Palm Plantation">
+            </figure>
+
+            <article class="about-content fade-right">
+
                 <span class="about-tag">
                     TENTANG KAMI
                 </span>
 
                 <h2>
                     Membangun Masa Depan
-                    Industri Kelapa Sawit
+                    Industri <span>Kelapa Sawit</span>
                     Berkelanjutan
                 </h2>
 
                 <p>
-                    PalmInsight hadir sebagai platform digital yang membantu
-                    petani, perusahaan, dan stakeholder industri kelapa sawit
-                    dalam mengelola perkebunan secara modern, efisien,
-                    dan berbasis data.
+                    Palmergy merupakan perusahaan yang berfokus pada pengolahan limbah kelapa sawit menjadi berbagai produk bernilai tinggi dan ramah lingkungan. Dengan mengedepankan inovasi, teknologi berkelanjutan, serta prinsip ekonomi sirkular, Palmergy berkomitmen mengubah limbah industri sawit menjadi sumber daya yang memberikan manfaat ekonomi sekaligus mengurangi dampak terhadap lingkungan.
                 </p>
 
+                <br>
+
                 <p>
-                    Dengan teknologi monitoring, analitik produksi,
-                    dan kalkulator keuntungan, PalmInsight mendukung
-                    transformasi industri sawit menuju praktik yang
-                    lebih produktif dan ramah lingkungan.
+                    Melalui pengembangan produk berkualitas dan solusi pengelolaan limbah yang modern, Palmergy hadir untuk mendukung terciptanya industri kelapa sawit yang lebih efisien, berkelanjutan, dan berdaya saing di masa depan.
                 </p>
 
                 <div class="about-stats">
-                    <div class="about-stat">
-                        <h3>500+</h3>
-                        <span>PERKEBUNAN</span>
+                    <div class="stat-card">
+                        <h3>24/7</h3>
+                        <span>MONITORING REAL-TIME</span>
                     </div>
 
-                    <div class="about-stat">
-                        <h3>34</h3>
-                        <span>PROVINSI</span>
+                    <div class="stat-card">
+                        <h3>AI</h3>
+                        <span>SMART ANALYTICS</span>
                     </div>
+
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <span>SUSTAINABLE APPROACH</span>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+    <!-- ================= PROSES PENGOLAHAN SAWIT ================= -->
+    <section class="process-timeline" id="process">
+        <header class="process-header animate-on-scroll">
+            <span class="process-tag">
+                THE JOURNEY
+            </span>
+
+            <h2>
+                Proses Pengolahan
+                <span>Kelapa Sawit</span>
+            </h2>
+
+            <p>
+                Dari tandan buah segar hingga menjadi Crude Palm Oil (CPO)
+                berkualitas tinggi melalui proses modern dan berkelanjutan.
+            </p>
+        </header>
+
+        <div class="timeline-container">
+            <div class="timeline-item left">
+                <div class="timeline-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="timeline-content animate-on-scroll">
+                    <div class="step-number">
+                        01
+                    </div>
+                    <h3>
+                        Pemanenan TBS
+                    </h3>
+                    <p>
+                        Tandan Buah Segar dipanen dari pohon kelapa sawit
+                        yang sudah matang.
+                    </p>
+                </div>
+
+                <div class="timeline-image animate-on-scroll">
+                    <img src="https://www.smart-tbk.com/wp-content/uploads/2017/04/harvester-1a.jpg">
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+
+                <div class="timeline-content animate-on-scroll">
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Pengangkutan & Sortasi
+                    </h3>
+
+                    <p>
+                        Buah dibawa ke pabrik dan dilakukan pemilihan
+                        kualitas sebelum proses produksi.
+                    </p>
+                </div>
+
+                <div class="timeline-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500">
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+
+                <div class="timeline-content animate-on-scroll">
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Sterilisasi
+                    </h3>
+
+                    <p>
+                        TBS direbus menggunakan uap panas untuk
+                        menghentikan enzim dan melunakkan buah.
+                    </p>
+                </div>
+
+                <div class="timeline-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=500">
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-icon">
+                    <i class="fas fa-oil-can"></i>
+                </div>
+
+                <div class="timeline-content animate-on-scroll">
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Pengempaan
+                    </h3>
+
+                    <p>
+                        Buah dihancurkan dan diperas untuk mengambil
+                        minyak kasar.
+                    </p>
+                </div>
+
+                <div class="timeline-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500">
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+
+                <div class="timeline-content animate-on-scroll">
+                    <div class="step-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Clarifikasi & Pemurnian
+                    </h3>
+
+                    <p>
+                        Minyak kasar dimurnikan menjadi CPO
+                        berkualitas tinggi.
+                    </p>
+                </div>
+
+                <div class="timeline-image animate-on-scroll">
+                    <img src="https://mutucertification.com/wp-content/uploads/2023/10/Proses-Pengolahan-Kelapa-Sawit-Menjadi-Crude-Palm-Oil.jpg">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="features">
-        <div class="features-header">
-            <span class="features-tag">OUR FEATURES</span>
+    <section class="features" id="innovation">
+        <div class="features-header animate-on-scroll">
+            <span class="features-tag">
+                PALM WASTE INNOVATION
+            </span>
             <h2>
-                Smart Solutions For
-                <span>Palm Plantation Management</span>
+                Mengubah Limbah Sawit
+                <span>Menjadi Produk Bernilai</span>
             </h2>
             <p>
-                Jelajahi berbagai fitur PalmInsight untuk membantu
-                pengelolaan perkebunan kelapa sawit secara efisien,
-                modern, dan berkelanjutan.
+                Limbah kelapa sawit tidak lagi menjadi masalah,
+                tetapi menjadi sumber daya baru melalui inovasi
+                berkelanjutan.
             </p>
         </div>
-        <div class="feature-grid">
-            <a href="smart-monitoring.html" class="feature-card">
-                <div class="feature-image">
-                    <img src="https://www.goldenagri.com.sg/wp-content/uploads/2025/04/Smart-Inventory-Management.png" alt="Plantation Monitoring">
+
+        <div class="palm-transform">
+            <!-- LEFT SIDE -->
+            <div class="waste-column left">
+                <article class="waste-card scale-up">
+                    <div class="icon">
+                        ♻
+                    </div>
+                    <div>
+                        <h3>
+                            Biomassa Energi
+                        </h3>
+                        <p>
+                            Limbah tandan kosong sawit
+                            dapat diolah menjadi energi
+                            terbarukan.
+                        </p>
+                    </div>
+                </article>
+                <article class="waste-card">
+                    <div class="icon">
+                        🌱
+                    </div>
+                    <div>
+                        <h3>
+                            Pupuk Organik
+                        </h3>
+                        <p>
+                            Limbah sawit dikembangkan
+                            menjadi pupuk ramah lingkungan.
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <!-- CENTER PALM -->
+            <div class="palm-center animate-on-scroll">
+                <div class="palm-glow"></div>
+                <img 
+                src="assets/sawit.png"
+                alt="Kelapa Sawit">
+                <span>
+                    Kelapa Sawit
+                </span>
+            </div>
+            <!-- RIGHT SIDE -->
+            <div class="waste-column right">
+                <article class="waste-card">
+                    <div class="icon">
+                        🔋
+                    </div>
+                    <div>
+                        <h3>
+                            Bio Energi
+                        </h3>
+                        <p>
+                            Limbah sawit dimanfaatkan
+                            sebagai sumber energi alternatif.
+                        </p>
+                    </div>
+                </article>
+                <article class="waste-card">
+                    <div class="icon">
+                        🧴
+                    </div>
+                    <div>
+                        <h3>
+                            Produk Turunan
+                        </h3>
+                        <p>
+                            Menghasilkan produk bernilai
+                            dari sisa industri sawit.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="monitoring" id="monitoring">
+        <div class="monitoring-header animate-on-scroll">
+            <span class="monitoring-tag">
+                SMART MONITORING
+            </span>
+
+            <h2>
+                Monitoring Produksi
+                <span>Kelapa Sawit Tahunan</span>
+            </h2>
+
+            <p>
+                Visualisasi hasil panen setiap tahun untuk membantu
+                pengambilan keputusan berbasis data secara real-time.
+            </p>
+        </div>
+
+        <div class="monitoring-card scale-up">
+
+            <div class="monitoring-top">
+                <div>
+                    <h3>Total Produksi</h3>
+                    <span>2020 - 2025</span>
                 </div>
-                <div class="feature-title">Smart Monitoring</div>
-            </a>
-            <a href="kalkulator.html" class="feature-card">
-                <div class="feature-image">
-                    <img src="assets/kalkulator.png" alt="Yield Analytics">
+
+                <div class="monitoring-badge">
+                    ↑ 18.6%
                 </div>
-                <div class="feature-title">Kalkulator Laba Sawit</div>
-            </a>
-            <a href="eco-k3.html" class="feature-card">
-                <div class="feature-image">
-                    <img src="assets/sawit.jpg" alt="Smart Irrigation">
+            </div>
+
+            <svg viewBox="0 0 800 300" class="chart-svg">
+
+                <defs>
+                    <linearGradient id="areaGradient">
+                        <stop offset="0%" stop-color="#00ff99" stop-opacity=".35"/>
+                        <stop offset="100%" stop-color="#00ff99" stop-opacity="0"/>
+                    </linearGradient>
+                </defs>
+
+                <!-- Area -->
+                <path
+                    class="chart-area"
+                    d="M50 250
+                    L150 220
+                    L250 190
+                    L350 170
+                    L450 130
+                    L550 110
+                    L650 80
+                    L750 60
+                    L750 300
+                    L50 300 Z">
+                </path>
+
+                <!-- Line -->
+                <path
+                    class="chart-line"
+                    d="M50 250
+                    L150 220
+                    L250 190
+                    L350 170
+                    L450 130
+                    L550 110
+                    L650 80
+                    L750 60">
+                </path>
+
+                <!-- Points -->
+                <circle class="chart-point"
+                        cx="50"
+                        cy="250"
+                        r="6"
+                        data-year="2018"
+                        data-ton="12.500 Ton"/>
+
+                <circle class="chart-point"
+                        cx="150"
+                        cy="220"
+                        r="6"
+                        data-year="2019"
+                        data-ton="14.200 Ton"/>
+
+                <circle class="chart-point"
+                        cx="250"
+                        cy="190"
+                        r="6"
+                        data-year="2020"
+                        data-ton="16.800 Ton"/>
+
+                <circle class="chart-point"
+                        cx="350"
+                        cy="170"
+                        r="6"
+                        data-year="2021"
+                        data-ton="18.500 Ton"/>
+
+                <circle class="chart-point"
+                        cx="450"
+                        cy="130"
+                        r="6"
+                        data-year="2022"
+                        data-ton="22.100 Ton"/>
+
+                <circle class="chart-point"
+                        cx="550"
+                        cy="110"
+                        r="6"
+                        data-year="2023"
+                        data-ton="24.400 Ton"/>
+
+                <circle class="chart-point"
+                        cx="650"
+                        cy="80"
+                        r="6"
+                        data-year="2024"
+                        data-ton="28.300 Ton"/>
+
+                <circle class="chart-point"
+                        cx="750"
+                        cy="60"
+                        r="6"
+                        data-year="2025"
+                        data-ton="31.700 Ton"/>
+
+            </svg>
+
+            <div id="chartTooltip" class="chart-tooltip"></div>
+            <div class="chart-years">
+                <span>2018</span>
+                <span>2019</span>
+                <span>2020</span>
+                <span>2021</span>
+                <span>2022</span>
+                <span>2023</span>
+                <span>2024</span>
+                <span>2025</span>
+            </div>
+
+            <div class="harvest-summary">
+
+                <div class="summary-card">
+                    <span>2018</span>
+                    <h4>12.500</h4>
+                    <small>Ton</small>
                 </div>
-                <div class="feature-title">Eco Palm & K3</div>
-            </a>
+
+                <div class="summary-card">
+                    <span>2019</span>
+                    <h4>14.200</h4>
+                    <small>Ton</small>
+                </div>
+
+                <div class="summary-card">
+                    <span>2020</span>
+                    <h4>16.800</h4>
+                    <small>Ton</small>
+                </div>
+
+                <div class="summary-card">
+                    <span>2021</span>
+                    <h4>18.500</h4>
+                    <small>Ton</small>
+                </div>
+
+                <div class="summary-card">
+                    <span>2022</span>
+                    <h4>22.100</h4>
+                    <small>Ton</small>
+                </div>
+
+                <div class="summary-card">
+                    <span>2023</span>
+                    <h4>24.400</h4>
+                    <small>Ton</small>
+                </div>
+
+                <div class="summary-card">
+                    <span>2024</span>
+                    <h4>28.300</h4>
+                    <small>Ton</small>
+                </div>
+
+                <div class="summary-card active">
+                    <span>2025</span>
+                    <h4>31.700</h4>
+                    <small>Ton</small>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <section class="cta">
         <div class="cta-line"></div>
         <div class="cta-glow"></div>
-        <div class="cta-content">
+        <div class="cta-content animate-on-scroll">
             <span class="cta-tag">FUTURE OF PALM INDUSTRY</span>
             <h2>
                 Pemanfaatan Limbah Sawit
@@ -159,14 +555,22 @@
                 energi terbarukan, dan teknologi modern.
             </p>
             <div class="cta-buttons">
-                <a href="process.html"><button class="btn-primary">Explore More</button></a>
+                <a href="kalkulator.html" class="cta-btn primary">
+                    <i class="fas fa-calculator"></i>
+                    Kalkulator Sawit
+                </a>
+
+                <a href="eco-k3.html" class="cta-btn secondary">
+                    <i class="fas fa-shield-alt"></i>
+                    Tips Keamanan
+                </a>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-line"></div>
-        <div class="footer-top">
+        <div class="footer-top animate-on-scroll">
             <div class="footer-brand">
                 <h2>PalmInsight</h2>
                 <p>
@@ -210,8 +614,6 @@
                 <p>Indonesia</p>
             </div>
         </div>
-
- 
 
         <div class="footer-bottom">
             <p>© 2026 PalmInsight. All Rights Reserved.</p>
